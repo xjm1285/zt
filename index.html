@@ -47,12 +47,12 @@ div.top h1{ font-size:32px; font-weight:bold;}
 
 
 <div>田格类型：
-<input type="radio" name="types" value="tzg" checked  >田字格&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<input type="radio" name="types" value="mzg">米字格&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type="radio" name="types" value="tzg" >田字格&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type="radio" name="types" value="mzg" checked >米字格&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 </div>
 <div>田格颜色：
-<input type="radio" name="bgcolor" value="green" ><span class="green">绿色</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<input type="radio" name="bgcolor" value="black" checked >黑色&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type="radio" name="bgcolor" value="green" checked ><span class="green">绿色</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type="radio" name="bgcolor" value="black">黑色&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 <input type="radio" name="bgcolor" value="red"><span class="red">红色
 </span>
 </div>
@@ -63,14 +63,19 @@ div.top h1{ font-size:32px; font-weight:bold;}
 <input type="radio" name="zcolor" value="red"><span class="red">红色</span>
 </div>
 
-<div>描红背景：
-<input type="radio" name="fcolor" value="1" ><span style="color:#888888">非常深</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<input type="radio" name="fcolor" value="2" ><span style="color:#999999">深</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<input type="radio" name="fcolor" value="3" ><span style="color:#a0a0a0">较深</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<input type="radio" name="fcolor" value="4"> <span style="color:#aaaaaa">略浅</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<input type="radio" name="fcolor" value="5" checked><span style="color:#b8b8b8">适中</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<input type="radio" name="fcolor" value="6"><span style="color:#cccccc">非常浅</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<!--input type="radio" name="fcolor" value="10"><span style="color:#ffffff; background:#666;padding:0px 3px;">白色（不可见）</span-->
+<div>描红颜色：
+<input type="radio" name="fcolor" value="green" ><span class="green">绿色</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type="radio" name="fcolor" value="black">黑色&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type="radio" name="fcolor" value="red" checked ><span class="red">红色</span>
+</div>
+
+<div>描红深浅：
+<input type="radio" name="fweight" value="1" ><span style="color:#888888">非常深</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type="radio" name="fweight" value="2" ><span style="color:#999999">深</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type="radio" name="fweight" value="3" ><span style="color:#a0a0a0">较深</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type="radio" name="fweight" value="4"> <span style="color:#aaaaaa">略浅</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type="radio" name="fweight" value="5" checked><span style="color:#b8b8b8">适中</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type="radio" name="fweight" value="6"><span style="color:#cccccc">非常浅</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 </div>
 
 <div id="bsfill" style="">笔顺剩余填充：
@@ -78,10 +83,16 @@ div.top h1{ font-size:32px; font-weight:bold;}
 <input type="radio" name="bs" value="0" checked="">否</div>
 
 <div id="pyfill" style="">显示拼音：
-<input type="radio" name="py" value="1"><span>是</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<input type="radio" name="py" value="0" checked="">否</div>
+<input type="radio" name="py" value="1" checked="" ><span>是</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type="radio" name="py" value="0">否</div>
 
-<div>自定义页头：<input type="text" name="title" value="田字格字帖生成器 网址：zt.cyang.net" class="input"></div>
+<div>拼音颜色：
+<input type="radio" name="pcolor" value="green" ><span class="green">绿色</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type="radio" name="pcolor" value="black">黑色&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type="radio" name="pcolor" value="red" checked ><span class="red">红色</span>
+</div>
+
+<div>自定义页头：<input type="text" name="title" value="" class="input"></div>
 
 <div class="btn"><input type="submit" value="点击生成" ></div>
 </form>

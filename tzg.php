@@ -12,7 +12,10 @@ if($_POST['bgcolor']!='black'){
 }
 
 $z_color=$_POST['zcolor']??'black';//主字体颜色
-$f_color=$_POST['fcolor']??'5';//辅字体颜色
+$f_color=$_POST['fcolor']??'5';//描红颜色
+$f_weight=$_POST['fweight']??'5';//描红深浅
+$p_color=$_POST['pcolor']??'red';//辅字体颜色
+
 $title=$_POST['title']??'';//辅字体颜色
 $bs=$_POST['bs']??'0';//笔顺填充
 $py=$_POST['py']??'0';//笔顺填充
@@ -61,13 +64,20 @@ $fz_color=[
 'red6'=>'255,204,204',//红色6
 ];
 
+/*拼音颜色*/
+$py_color=[
+'green'=>'0,176,80',//绿色
+'black'=>'0,0,0',//黑色
+'red'=>'152,15,41',//红色
+];
+
 $color=$color[$z_color];//显示主颜色
 
-$fcolor=$fz_color[$z_color.$f_color];//辅助颜色
+$fcolor=$fz_color[$f_color.$f_weight];//描红颜色
 
-if($f_color=='10'){
-	$fcolor=$fz_color['10'];
-}
+$pcolor=$py_color[$p_color];//显示拼音颜色
+
+
 ?><!doctype html>
 <html>
 <head>
@@ -113,9 +123,9 @@ for($ihz=0;$ihz<count($hz['0']);$ihz++){
 	
 	if($py)
 	{
-		//print_r($hz['0'][$ihz]);
+		// print_r($hz['0'][$ihz]);
 		$py_str=Pinyin::getPinyin($hz['0'][$ihz]);
-		echo '<li class="svg" style="positon: relative;"><span style="font:2px bolder;display:block;position:absolute;width:80px;color:rgb('.$color.')">'.$py_str.'</span><svg width="54" height="54" style="margin-top: -11px;"><g transform="translate(-2.9,48) scale(0.058, -0.0572)">';
+		echo '<li class="svg" style="positon: relative;"><span style="font:10px bolder;display:block;position:absolute;width:80px;color:rgb('.$pcolor.')">'.$py_str.'</span><svg width="54" height="54" style="margin-top: -11px;"><g transform="translate(-2.9,48) scale(0.058, -0.0572)">';
 	}
 	else
 	{
